@@ -1,0 +1,85 @@
+extends Tamplate/head
+
+mixin circle(button_img, button_name)
+    .round_title
+        div.button_img
+            img(src=button_img)
+        div.button_name=button_name
+
+mixin items(name_cafe, adress_cafe)
+    .one_item
+        .image
+        .desc
+            .name=name_cafe
+            .adress=adress_cafe
+
+
+
+block content
+    .bg
+        include Tamplate/menu
+        .rectangle_1
+            .logo(id="logo")
+                img(src="pic/logo-54-x-54.png" srcset="pic/logo-54-x-54@2x.png 2x, pic/logo-54-x-54@3x.png 3x"
+                class="logo_54x54")
+            .top
+                .circle
+                    .m M
+                .settings
+                    .icon
+                    .top_text Настройки
+                .account
+                    div У вас на счёте: <b> 650,00 Р</b>
+                .download
+                    .icon
+                    .top_text Скачать плеер
+                .lang
+                    .icon
+                    .top_text Русский
+        .button
+            +circle('pic/ic-music.png','музыка')
+            +circle('pic/ic-video.png','видео')
+            +circle('pic/ic-odject.png','объекты')
+            +circle('pic/ic-ad.png','реклама')
+        .rectangle_2
+            .list
+                .list_head
+                    .text ОБЪЕКТЫ
+                    .text ГРУППЫ ОБЪЕКТОВ
+                    #line
+                .list_item
+                    +items('Кафе "Белые берёзки"', 'Проспект Кирова')
+                    +items('Бар "Наливайка"','Проспект Ленина')
+                    +items('Паб "Ражая Стерва"','ул.Гоголя')
+                    +items('Кафе "Белые берёзки"', 'Проспект Кирова')
+                    +items('Бар "Наливайка"','Проспект Ленина')
+                    +items('Паб "Ражая Стерва"','ул.Гоголя')
+                    +items('Кафе "Белые берёзки"', 'Проспект Кирова')
+                    +items('Бар "Наливайка"','Проспект Ленина')
+                    +items('Паб "Ражая Стерва"','ул.Гоголя')
+
+            .description
+                .now_looking
+                    .image
+                    .icon_foto
+                        img(src="pic/icon-add-photo-big.png" srcset="pic/icon-add-photo-big@2x.png 2x, " +
+                        "pic/icon-add-photo-big@3x.png 3x")
+                    .desc
+                        .name Кафе "Белые берёзки"
+                        .adress Проспект Кирова
+                .button_in_desc
+                    .text ПЛЭЙЛИСТЫ
+                    .text НАСТРОЙКИ ВЕЩАНИЯ
+                    .text АРХИВ ВЕЩАНИЯ
+                    .text ДИАГРАММА ЧАСА
+                    #line2
+                .date_time
+                    .dia_text
+                    .choose_date
+                    .calendar
+                    .choose_time
+                    .clock
+                    .button_ok
+            //p Дата: <input type="text" id="datepicker">
+
+
