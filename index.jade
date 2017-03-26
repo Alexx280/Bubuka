@@ -22,6 +22,7 @@ block content
             .logo(id="logo")
                 img(src="pic/logo-54-x-54.png" srcset="pic/logo-54-x-54@2x.png 2x, pic/logo-54-x-54@3x.png 3x"
                 class="logo_54x54")
+            .name_site БУБУКА
             .top
                 .circle
                     .m M
@@ -74,12 +75,18 @@ block content
                     .text ДИАГРАММА ЧАСА
                     #line2
                 .date_time
-                    .dia_text
-                    .choose_date
+                    .dia_text ДИАГРАММА ЧАСА
+                    .choose_date Выберите дату:
                     .calendar
-                    .choose_time
+                        .date_icon
+                        .date_text <input type="text" id="datepicker">
+                    .choose_time Выберите время:
                     .clock
+                        .clock_icon
+                        .clock_text
                     .button_ok
+                        .button_text ПРИМЕНИТЬ
+                .bottom_line
             //p Дата: <input type="text" id="datepicker">
 
 

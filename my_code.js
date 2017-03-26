@@ -32,4 +32,6 @@ $(document).ready(function() {
     var button_left = $('.button_img');
     button_left.on('click', function(){$('.button_img').css('background-color', '')});
     button_left.on('click', function(){$(this).css('background-color', 'orange')});
+
+
 });
